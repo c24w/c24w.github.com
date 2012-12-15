@@ -1,0 +1,143 @@
+{
+	"projects": [
+		{
+			"name": "Online Portfolio",
+			"desc": "This very website!",
+			"info" : "<p>This is my bespoke portfolio website, developed to catalogue my projects and creations, from <em>scratch</em>.  All the data, including these words, are loaded asynchronously from <a href=\"/data.json\">a JSON file</a>, optionally filtered by:</p><ul><li>the name of a creation<ul><li>easily accessed by clicking creation name<li>displays additional information for that creation<li>URL resembles: <em>/#!/name/Name_of_Creation</em></ul></ul><ul><li>a tag from a creation<ul><li>URL resembles: <em>/#!/tag/Project_Tag</em></ul></ul>",
+			"tags": ["HTML", "CSS", "JavaScript", "JQuery", "JSON", "AJAX", "Notepad++", "Ongoing", "Project", "Functional", "Web"],
+			"created": [21,7,12],
+			"longURL": "/",
+			"thumbs": ["Online_Portfolio_thumb.png"]
+		},
+		{
+			"name": "Fireworks",
+			"desc": "Pure JavaScript fireworks animation on an HTML5 canvas. First experimentation with object-oriented JavaScript, the JavaScript Audio object and CSS3 nth-child selectors.",
+			"info": "To view keyboard hot-keys, right-click or press <em>H</em> anywhere on the page.<p>Fireworks launch:</p><ul><li>intermittently: random number of fireworks, in the range 1 to (10% &times; visible screen width), at random locations, if all previous fireworks have dissipated<li>by left-clicking: 1 firework at the clicked location</ul>Firework properties:<ul><li>rocket dimensions: relative to explosion radius (i.e. big rocket = big explosion!)<li>explosion radius: random in the range (25% to 50%) &times; (visible page height)<li>sound effects:<ul><li>launch (100% probability)<li>screeching, faster rocket (10% probability)</ul><ul><li>explosion (random - equal probability; mutually exclusive):<ul><li>bang<li>pop</ul></ul><li>colour variations (random - equal probability; mutually exclusive):<ul><li>solid<li>rave (random particle colours) - only if effect is <em>sparkle</em> (probability reduced by 50%)<li>pulse (shifting particle colour)</ul><li>effects (random - 50% probability each; compatible together):<ul><li>sparkle (random particle sizes; fizzing sound-effect)<li>glow (shifting particle brightness)<li>longer-lasting (increased <em>hang</em>-time)</ul></ul><p>Developed in Google Chrome, from <em>scratch</em>; tested working in Mobile Safari (<a href=\"http://developer.apple.com/library/safari/#documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html%23//apple_ref/doc/uid/TP40009523-CH5-SW4\">no sound</a>) & Internet Explorer 9.</p>",
+			"tags": ["HTML", "CSS", "JavaScript", "'Fiddle'", "Web", "OOP", "Audacity"],
+			"created": [13,8,12],
+			"longURL": "http://jsfiddle.net/c24w/PmU6S/show/",
+			"shortURL": "http://goo.gl/6nbaa",
+			"thumbs": ["Fireworks_thumb.png", "Fireworks_thumb_2.gif"]
+		},
+		{
+			"name": "Parallax Scrolling",
+			"desc": "Zoom!",
+			"info": "Aeroplane through clouds, demonstrating parallax scrolling (offset layers simulating depth-of-field). Clouds are randomly positioned and some are randomly sized.  Developed in Google Chrome, from <em>scratch</em>.",
+			"tags": ["HTML", "CSS", "JavaScript", "'Fiddle'", "Web"],
+			"created": [9,8,12],
+			"longURL": "http://jsfiddle.net/c24w/vJ4xF/show/",
+			"shortURL": "http://goo.gl/D5gdJ",
+			"thumbs": ["Parallax_Scrolling_thumb.png"]
+		},
+		{
+			"name": "Bouncy Ball",
+			"desc": "Boing!",
+			"info": "First experimentation with CSS3 keyframe animations. Developed in Google Chrome, from <em>scratch</em>.",
+			"tags": ["HTML", "CSS", "'Fiddle'", "Web"],
+			"created": [6,8,12],
+			"longURL": "http://jsfiddle.net/c24w/vJ4xF/show/",
+			"shortURL": "http://goo.gl/duYpm",
+			"thumbs": ["Bouncy_Ball_thumb.png"]
+		},
+		{
+			"name": "Monopoly Tile Creator",
+			"desc": "Generates a Monopoly-style board tile based on user-specified criteria.",
+			"info" : "<p>Experimentation with HTML5 canvas, colour-picker & data-list. Developed in Google Chrome, from <em>scratch</em>. The following may be specified in the form and are subsequently passed by URL parameters, where the tile is generated:</p><ul><li>colour<li>font name/type<li>font size<li>property name<li>currency symbol(s)<li>tile dimensions</ul>",
+			"tags": ["HTML", "CSS", "JavaScript", "Notepad++", "'Fiddle'", "Functional", "Web"],
+			"created": [21,7,12],
+			"longURL": "http://goo.gl/e6cvi",
+			"thumbs": ["Monopoly_Tile_Creator_thumb.png"]
+		},
+		{
+			"name": "Drag & (Eye) Drop",
+			"desc": "Eyedropper tool for an image dropped onto the page.",
+			"info" : "<p>Experimentation with HTML5 canvas, drag-and-drop interface and FileReader. Developed in Google Chrome, from <em>scratch</em>. Usage:</p><ol><li>drag and drop an image onto the page (the image will become visible on the page)<li>click within the image to discover the colour of that pixel (a colour picker will appear on that colour)<li>click outside of the colour picker to select a different pixel (the colour picker will disappear and you will return to the original image)</ol><p>Note: you may drag and drop a new image to the page at any time.</p>",
+			"tags": ["HTML", "CSS", "JavaScript", "Notepad++", "'Fiddle'", "Functional", "Web"],
+			"created": [20,7,12],
+			"longURL": "http://jsfiddle.net/c24w/ynwEa/show/",
+			"shortURL": "http://goo.gl/1M1Er",
+			"thumbs": ["Drag_And_Eye_Drop_thumb.png"]
+		},
+		{
+			"name": "Darts Scoring & Statistics",
+			"desc": "Interactive darts scoreboard with accumulating statistics, such as:<ul><li>most-frequent single-dart score;<li>average time between throws; and<li>highest 3-dart finish.</ul>",
+			"tags": ["Project", "Java", "SQL", "SVN", "NetBeans", "Ongoing", "Functional", "Software", "OOP"],
+			"created": [22,3,12],
+			"longURL": "http://code.google.com/p/d-a-r-t-s/",
+			"shortURL": "http://goo.gl/pdMls",
+			"thumbs": ["Darts_Scoring_And_Statistics_thumb.png"]
+		},
+		{
+			"name": "Widget Co (Pre-interview Exercise)",
+			"desc": "Development of mock website as an interview exercise, from <em>scratch</em>.",
+			"info": "<em>Specification:</em><p>Presentation Layer Developer Exercise</p><p>Please recreate the design located in the _DESIGN folder [see below]. Background and carousel assets are provided in the images folder.</p><p>Some of the main points to hit on:</p><ul><li>the background is intended to be full screen and should scale to fit the window</li><li>carousels should slide horizontally from image to image, and the navigation/pagination should function</li><li>page content (logo, nav, main content area) should stay centered unless wider than the window</li></ul><p>Don't be afraid to fill in details to make a more polished experience.</p><p>Don't forget to check your work in multiple browsers.</p><p>Provided material:</p><ul><li>_DESIGN images: <a href=\"http://i47.tinypic.com/qqquyd.jpg\">first</a>, <a href=\"http://i46.tinypic.com/34r636e.jpg\">second</a><li><a href=\"http://k003.kiwi6.com/hotlink/bj3t58i2mc/design.psd\">design.psd</a> (~11MB) <a href=\"http://www.largedocument.com/3/0a6976fe/design.psd\">[alternate link]</a></ul>",
+			"tags": ["HTML", "CSS", "JavaScript", "Notepad++", "Photoshop", "'Fiddle'", "Web"],
+			"created": [15,3,12],
+			"longURL": "http://jsfiddle.net/c24w/RJ5yM/show/",
+			"shortURL": "http://goo.gl/Xvg6r",
+			"thumbs": ["Widget_Co_Pre-interview_Exercise_thumb.png"]
+		},
+		{
+			"name": "Power Scheme Manager",
+			"desc": "System Tray & GUI Application to toggle and manage Windows Power Plans/Schemes.",
+			"info": "Features include:<ul><li>set active<li>rename<li>delete<li>import/export.</ul>Other features:<ul><li>adjust screen brightness<li>battery status information",
+			"tags": ["Project", "Java", "SQL", "NetBeans", "Photoshop", "SVN", "Ongoing", "Functional", "Software", "OOP"],
+			"created": [15,10,11],
+			"longURL": "http://sourceforge.net/projects/powerschememgr/",
+			"shortURL": "http://goo.gl/GYw96",
+			"thumbs": ["Power_Scheme_Manager_thumb_2.png", "Power_Scheme_Manager_thumb.png"]
+		},
+		{
+			"name": "Google Plus +1 any URL",
+			"desc": "Web-page allowing users to retrieve the +1 button for any URL and optionally add it to their +1's.",
+			"info": "Spin-off idea from <a href=\"/#!/name/Google_Plus_%2B1_%26_Share_to_Stream_Bookmarklets\">Google Plus +1 & Share to Stream Bookmarklets</a>, offering an alternative solution - a web-page which dynamically produces the Google +1 button for a given URL. It is used, although results suggest users prefer the bookmarklets.",
+			"tags": ["HTML", "Photoshop", "CSS", "JavaScript", "Notepad++", "FTP", "Project", "Functional", "Web"],
+			"created": [26,8,11],
+			"longURL": "http://google-plus-1-bookmarklet.googlecode.com/svn/trunk/html/bookmarklets",
+			"shortURL": "http://goo.gl/EOp49",
+			"thumbs": ["Google_Plus_1_Any_URL.png"]
+		},
+		{
+			"name": "Google Plus +1 & Share to Stream Bookmarklets",
+			"desc": "Bookmarklet to +1 and share pages to your Google Plus stream.",
+			"info": "Identified need for a more functional bookmarklet, with choice of style. Iterative development building on user feedback. Currently over 1000 uses/clicks per month - 7000 in 9 months - in over 40 countries (across all variations). Two user quotes:<ul><li><em>Install this Google Plus bookmarklet, which is the only one that I currently recommend. I use it on Chrome and Mozilla.</em><li><em>quick and easy. the best.</em></ul>Consistently on the first page of relevant Google searches. Statistics (short URL analytics):<ul><li>current bookmarklets only: http://bit.ly/quKidc<li>all others (including obsolete): http://bit.ly/HzdXcX</ul>",
+			"tags": ["HTML", "CSS", "JavaScript", "Notepad++", "SVN", "markdown", "Ongoing", "Project", "Functional", "Web"],
+			"created": [15,7,11],
+			"longURL": "http://google-plus-1-bookmarklet.googlecode.com/svn/trunk/html/bookmarklets",
+			"shortURL": "http://goo.gl/EOp49",
+			"thumbs": ["Google_Plus_1_And_Share_To_Stream_Bookmarklets.png"]
+		},
+		{
+			"name": "Sarah's Designs",
+			"desc": "Design, development and implementation of a Jewellery & Floristry website, from <em>scratch</em>.",
+			"info": "<p>I was commissioned by small business to create an online presence, including social (Facebook, Google+). It contains over 20 pages, for which I developed:<ul><li>look-and-feel (style, layout, colours, typefaces, graphics)<li>images/photos (creation, manipulation, enhancements)<li>content",
+			"tags": ["HTML", "Photoshop", "CSS", "JavaScript", "Notepad++", "FTP", "Ongoing", "Project", "Functional", "Web"],
+			"created": [11,7,9],
+			"longURL": "http://sarahsdesigns.atspace.com/",
+			"shortURL": "http://goo.gl/kFbGP",
+			"thumbs": ["Sarahs_Designs_thumb.png"]
+		},
+		{
+			"name": "ViA",
+			"desc": "Profile/Configuration Management Tool (University Final Year Project / Dissertation).",
+			"info": "<h3>Abstract</h3><p>As technology progresses, people find themselves using computers more frequently for both personal purposes and in the workplace. They will often have duplicate applications between computers which they want configured similarly. Manually configuring each computer to achieve the same set-up can prove somewhat tiresome - there is apparent scope for a more effective solution, therefore, something concurred from user feedback.</p><p>Examination of products in this market identified that none provided an ideal, overall system; and so the concept to develop a 'Profile/Configuration Management Tool' was proposed. Its features would be an aggregation of those across existing products, coupled with relevant innovations. However, the first phase of its production would naturally be limited by the inexperience and time-availability of the developer (report author).</p><p>Through requisite phases of project management, a fully functioning, validated trial product was achieved, meeting the specified features - including real-time availability and effective security. From the project journey and evolving ideas, a variety of future work became identified - indicating scope for the product concept to be progressed further.</p><p>In summary, a system has been developed by an inexperienced code-writer, which delivers on product features that could usefully meet with potential customer needs. This is a subject area that could merit release as open source, to see what might be stimulated - something that the author suggests for considering with members of The School of Computer Science.</p><h3>System outline</h3><h4>Architecture</h4><p>The proposed system will tackle this issue by allowing users to manually exchange data between their computers and a central server. It will operate around a client-server architecture, whereby users (clients) authenticate themselves to the server. The data is securely stored against their account, on the server, and may then be routed to its correct destination on each computer, using the client interface, as required. By default, common configurations will be detected and included, such as for web browsers and email clients. Users will also be able to define their own settings for specific applications to cater for their needs, using an independently-editable document, possibly using Extensible Markup Language (XML). This file points to locations on their computers and provides relatively powerful commands for specifying which directories and files to include.</p><h4>Server</h4><p>The server will hold the latest versions of users' data, which is available on-demand, in real-time, regardless of the accessibility of the source machines. Therefore, the server acts as both: an intermediate system to coordinate client machines; and a back-up service for users' data.  Many services do not offer both of these features, but it will be an integral part of the proposed system; thus comprising some of the core functionality since they are most desirable features.</p><h4>Technology</h4><p>The whole system will be coded using Java, and therefore will be platform-independent to ensure maximum usability and compatibility between server and client. The accounts system will be implemented using an SQL database, because SQL is well regarded and can be made to interact with Java. Administrators will be able to access the accounts system using SQL's native terminal commands, on the server machine. Users' data will be stored on a specified drive/partition on the machine running the server, using the machine's file-system because Java can interact with this also.</p><h4>Graphical User Interfaces</h4><p>The client GUI will be designed to be minimal whilst intuitive, with well-tested practices. The server GUI will be terminal-based and only be available to Administrators on the machine running the server. A basic administrator GUI and account may be made available for logging in remotely to access server-side data. All sensitive data will be protected accordingly.</p><h4>Distribution</h4><p>It will be developed and released for free with the core functionality included, and a server-side size limitation per account (monitored by the server) will be considered within the project. There is scope for premium options, such as dated back-ups (which can be restored) and more server space.</p><p>Because the system gives control back to the user, allowing them to define what they transfer, it differs significantly to the various mainstream, autonomous, synchronisation systems.</p>",
+			"tags": ["Project", "Java", "SQL", "NetBeans", "Photoshop", "XML", "Ongoing", "Functional", "Software", "OOP"],
+			"created": [2,7,10],
+			"longURL": "",
+			"shortURL": "",
+			"thumbs": ["ViA_thumb.png"]
+		}
+	],
+	
+	"pages": {
+		"me": {
+			"title": "About",
+			"content": "I am Chris Watson - a Computer Science graduate from England who is currently seeking suitable job opportunities. I have created this portfolio website (<a href=\"/#!/name/Online_Portfolio\">a project in itself</a>) to catalogue my projects/creations and to help demonstrate my various computer-related skills and interests.<p><a href=\"http://fb.me/chris24watson\" class=\"social\" style=\"background:url(http://facebook.com/favicon.ico)\"></a><a href=\"http://gplus.to/chriswatson\" class=\"social\" style=\"background:url(http://plus.google.com/favicon.ico)\"></a>"
+		}
+	},
+	
+	"resources": {
+		"defaultThumb" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABiCAYAAACmu3ZJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAKBSURBVHhe7ZpRbsIwEAVLz8XxuVdbkKKqVMYx3uxOrOEP4qyf3/iROM7l6+fz4QfjwCdGiUIeDggENhEEIhCYAzA5JkQgMAdgckyIQGAOwOSYEIHAHIDJMSECgTkAk2NCBAJzACbHhAgE5gBMjgkRCMwBmJxL5hbu7Xb7M/zr9fr43vq95dVz+1a7rT7M85dy/MuC0UpNyDb2XiK2488zvPV7L0lnSooJgSWkFMh95p5p9mawKwWSMcCz9SEQGDGBCATmAEyOCYEBSV2HtFbYrRX75lVrPdLz8ox3cCakRzX5eGpCksd2yu5MCAybQAQCcwAmx4QIBOYATI4JEQjMAZicJRJyfwKwd58d5v8/OUsAoZs8os+V+ohbCW1NSILJI10IZMSthLYCSTB5pIvUa8jonVBrP6O3r9IzYK+Oiv0UE9Kjl3w8NSHb2Pa+gVjVblRnJDMTEulmQC2BvDCx4s1KgQTM6sgSAol0M6CWQAJMjCwhkBduVjxFFkjk9A6oVboO6ekfXak/1zvq/J7umeMmZMa9A84tTUjFs6IDPAwtaUJC7ZwvlpqQ2ae088PlVzAhMEapCYGNHSnHhMCwCEQgMAdgcpZKSMWzp2ieSwGJNqei3hJ3WXv33isMHu3ThIw6dnB7gRxs8Gh5gYw6dnB7xDXk3WvAu+cd7OlUeRMyZV/8yQggFe8/xVsZUxEBJGYoa1QRCIyjQAQCcwAmx4QIBOYATI4JgQE59Up983KlFbsJgSUEAcSV+u+sQACBTdJSOYhrSJQDK1xLTEjUbAiqs1RCgjwpLWNCSu3/37lABAJzACbHhAgE5gBMjgkRCMwBmBwTIhCYAzA5JgQG5BtoHq7YT2Vy5gAAAABJRU5ErkJggg==",
+		"thumbURL": "http://i48.photobucket.com/albums/f245/c24w/Portfolio/"
+	}
+}
