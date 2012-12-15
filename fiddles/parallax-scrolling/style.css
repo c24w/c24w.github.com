@@ -1,0 +1,35 @@
+﻿body
+{
+	background: url(http://i47.tinypic.com/16bk3z5.jpg) #5af;
+	/*
+        http://i47.tinypic.com/16bk3z5.jpg
+        http://i49.tinypic.com/a9wx2e.jpg
+        http://i45.tinypic.com/23suoo0.jpg
+        http://i50.tinypic.com/rk3jhl.jpg
+        http://i46.tinypic.com/5u2x5h.jpg
+        http://i48.tinypic.com/2rp5oqr.jpg
+        http://i46.tinypic.com/2mr8d2c.jpg
+    */
+	width: 2000px;
+	height: 4000px;
+}
+
+#cropArea
+{
+	position: absolute;
+	overflow: hidden;
+}
+
+#plane
+{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.cloud
+{
+	z-index: 2;
+	position: absolute;
+}
