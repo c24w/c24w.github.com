@@ -25,8 +25,8 @@
 			"info": "Aeroplane through clouds, demonstrating parallax scrolling (offset layers simulating depth-of-field). Clouds are randomly positioned and some are randomly sized.  Developed in Google Chrome, from <em>scratch</em>.",
 			"tags": ["HTML", "CSS", "JavaScript", "'Fiddle'", "Web"],
 			"created": [9,8,12],
-			"longURL": "http://jsfiddle.net/c24w/vJ4xF/show/",
-			"shortURL": "http://goo.gl/D5gdJ",
+			"longURL": "/fiddles/parallax-scrolling/",
+			"shortURL": "/fiddles/parallax-scrolling/",
 			"thumbs": ["Parallax_Scrolling_thumb.png"]
 		},
 		{
