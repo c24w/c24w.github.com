@@ -1,6 +1,6 @@
 ﻿body
 {
-	background: url(http://i47.tinypic.com/16bk3z5.jpg) #5af;
+	background: url(background.jpg) #5af;
 	/*
         http://i47.tinypic.com/16bk3z5.jpg
         http://i49.tinypic.com/a9wx2e.jpg
@@ -12,11 +12,15 @@
     */
 	width: 2000px;
 	height: 4000px;
+	margin: 0;
+	padding: 0;
 }
 
 #cropArea
 {
 	position: absolute;
+	left: 0;
+	top: 0;
 	overflow: hidden;
 }
 
@@ -30,6 +34,15 @@
 
 .cloud
 {
-	z-index: 2;
 	position: absolute;
 }
+
+	.cloud.foreground
+	{
+		z-index: 2;
+	}
+
+	.cloud.background
+	{
+		z-index: 0;
+	}
