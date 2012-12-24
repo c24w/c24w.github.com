@@ -37,7 +37,7 @@
 
 		var pageWidth = b.offsetWidth;
 		var pageHeight = b.offsetHeight;
-		var viewWidth = window.innerWidth;wi
+		var viewWidth = window.innerWidth;
 
 		var box = document.getElementById('cropArea');
 		box.style.width = pageWidth + 'px';
