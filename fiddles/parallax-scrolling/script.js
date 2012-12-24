@@ -48,17 +48,6 @@
 		var noClouds = Math.floor(pageWidth * pageHeight / 250000);
 		var clouds = [];
 
-		for (var i = 0; i < noClouds; i++) {
-			var w = scaleRand(254);
-			var h = scaleRand(198);
-			var x = randInt(pageWidth - w);
-			var y = randInt(pageHeight - h);
-			var layer = (i % 2 === 0) ? 'background' : 'foreground';
-			var cloud = new Cloud(w, h, x, y, layer);
-			if (i % 2 == 0) clouds[i] = cloud;
-			box.appendChild(cloud.element);
-		}
-
 		function Cloud(w, h, x, y, layer) {
 			this.element = document.createElement('img');
 			this.element.src = 'cloud.png';
@@ -123,5 +112,16 @@
 			plane.style.top = y + 'px';
 		}
 
-	}
+		for (var i = 0; i < noClouds; i++) {
+			var w = scaleRand(254);
+			var h = scaleRand(198);
+			var x = randInt(pageWidth - w);
+			var y = randInt(pageHeight - h);
+			var layer = (i % 2 === 0) ? 'background' : 'foreground';
+			var cloud = new Cloud(w, h, x, y, layer);
+			if (i % 2 == 0) clouds[i] = cloud;
+			box.appendChild(cloud.element);
+		}
+
+	};
 });
