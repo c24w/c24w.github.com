@@ -85,6 +85,9 @@
 		}
 
 		window.onscroll = function () {
+
+			box.style.width = pageWidth + 'px';
+			box.style.height = pageHeight + 'px';
 			positionBackground(0.9);
 			positionClouds(0.5);
 			positionPlane();
