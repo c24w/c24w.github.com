@@ -40,7 +40,7 @@
 		var viewWidth = window.innerWidth;
 		var viewHeight = window.innerHeight;
 
-		var box = document.getElementById('cropArea');
+		box = document.getElementById('cropArea');
 		box.style.width = pageWidth + 'px';
 		box.style.height = pageHeight + 'px';
 
@@ -85,7 +85,6 @@
 		}
 
 		window.onscroll = function () {
-
 			box.style.width = pageWidth + 'px';
 			box.style.height = pageHeight + 'px';
 			positionBackground(0.9);
