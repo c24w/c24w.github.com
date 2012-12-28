@@ -1,4 +1,4 @@
-﻿window.addEventListener('DOMContentLoaded', function () {
+﻿window.onload = function () {
 
 	var b = document.body;
 
@@ -121,4 +121,4 @@
 		plane.style.top = y + 'px';
 	}
 
-});
+};
