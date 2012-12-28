@@ -38,11 +38,16 @@
 	var viewWidth = window.innerWidth;
 	var viewHeight = window.innerHeight;
 
-	var box = document.getElementById('cropArea');
+	var box = document.createElement('div');
+	box.id = 'cropArea';
 	box.style.width = pageWidth + 'px';
 	box.style.height = pageHeight + 'px';
 
-	var plane = document.getElementById('plane');
+	var plane = document.createElement('img');
+	plane.src = 'plane.png';
+	plane.id = 'plane';
+	box.appendChild(plane);
+
 	var noClouds = Math.floor(pageWidth * pageHeight / 250000);
 	var clouds = [];
 
@@ -56,6 +61,9 @@
 		if (i % 2 == 0) clouds[i] = cloud;
 		box.appendChild(cloud.element);
 	}
+
+	b.appendChild(box);
+	b.removeChild(b.children[0]);
 
 	function Cloud(w, h, x, y, layer) {
 		this.element = document.createElement('img');
