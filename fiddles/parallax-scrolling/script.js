@@ -111,12 +111,6 @@
 		}
 	}
 
-	/*  +--------page--------+
-		|   |  □   |         |
-		|   |      |         |
-		|   | view |         |
-		+--------------------+  */
-
 	function positionPlane() { // location of view relative to page -> location of plane relative to view
 		var navigablePageWidth = pageWidth - viewWidth;
 		var navigablePageHeight = pageHeight - viewHeight;
@@ -146,7 +140,7 @@
 			h = scaleRand(198),
 			x = randInt(pageWidth - w),
 			y = randInt(pageHeight - h),
-			everyOtherCloud = i % 2 === 0;
+			everyOtherCloud = i % 2 === 0,
 			layer = (everyOtherCloud) ? 'background' : 'foreground',
 			cloud = new Cloud(w, h, x, y, layer);
 
