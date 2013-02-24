@@ -37,11 +37,6 @@ function enablePageDragging(options) {
 	captureArea.style.width = captureArea.style.height = '100%';
 	captureArea.style.zIndex = '999';
  
-	captureArea.ondblclick = function () {
-		this.parentNode.removeChild(this);
-		x = y = invert = d = b = captureArea = mouseDown = null;
-	};
- 
 	captureArea.onmousedown = function (e) {
 		setOldXY(e);
 		mouseDown = true;
