@@ -2,36 +2,67 @@
 
 	var b = document.body;
 
-	function enablePageDragging(xSpeed, ySpeed) {
-		if (typeof xSpeed === 'undefined') xSpeed = 1;
-		if (typeof ySpeed === 'undefined') ySpeed = xSpeed;
-		var b = document.body;
-		var dragging = false;
-		var oldX, oldY;
-		b.onmousedown = function (e) {
-			oldX = e.x;
-			oldY = e.y;
-			dragging = true;
-			e.preventDefault()
-		};
-
-		b.onmouseup = function (e) {
-			dragging = false;
-			e.preventDefault();
-		};
-
-		b.onmousemove = function (e) {
-			if (dragging) {
-				var newX = e.x;
-				var newY = e.y
-				scrollBy((newX - oldX) * xSpeed, (newY - oldY) * ySpeed);
-				oldX = newX;
-				oldY = newY;
-			}
-		};
+function enablePageDragging(options) {
+	// options.xSpeed = integer
+	// options.ySpeed = integer
+	// options.invert = boolean
+ 
+	var x = { speed: options && options.xSpeed || 1 },
+		y = { speed: options && options.ySpeed || 1 },
+		invert = options && options.invert,
+		d = document, b = d.body,
+		captureArea = d.createElement('div'),
+		mouseDown;
+ 
+	function isLeftClick(e) { return e.button === 0; }
+ 
+	function setOldXY(e) {
+		x.old = e.x;
+		y.old = e.y;
 	}
-
-	enablePageDragging(0.3, 2);
+ 
+	function getScrollAmount(o) {
+		var amount = o.old - o['new'];
+		amount = invert ? 0 - amount : amount;
+		return amount * o.speed;
+	}
+ 
+	function setNewXY(e) {
+		x['new'] = e.x;
+		y['new'] = e.y;
+	}
+ 
+	captureArea.style.position = 'fixed';
+	captureArea.style.top = captureArea.style.left = '0';
+	captureArea.style.width = captureArea.style.height = '100%';
+	captureArea.style.zIndex = '999';
+ 
+	captureArea.onmousedown = function (e) {
+		setOldXY(e);
+		mouseDown = true;
+		e.preventDefault();
+	};
+ 
+	captureArea.onmouseup = function (e) {
+		mouseDown = false;
+		e.preventDefault();
+	};
+ 
+	captureArea.onmousemove = function (e) {
+		if (mouseDown) {
+			setNewXY(e);
+			scrollBy(getScrollAmount(x), getScrollAmount(y));
+			setOldXY(e);
+		}
+	};
+ 
+	b.appendChild(captureArea);
+}
+ 
+enablePageDragging({
+	invert: true,
+	ySpeed: 3
+});
 
 	var pageWidth = b.offsetWidth;
 	var pageHeight = b.offsetHeight;
