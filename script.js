@@ -88,7 +88,7 @@ function getThumbsHTML(p) {
 	img.src = iSrc;
 	for (; i < t.length; i++) {
 		var t2 = t[i];
-		if (t2 != undefined && !isBlankString(t2)) {
+		if (t2 && !isBlankString(t2)) {
 			img.setAttribute('onmouseover', 'this.src=\'' + baseURL + t2 + '\'');
 			img.setAttribute('onmouseout', 'this.src=\'' + iSrc + '\'');
 			break;
@@ -98,12 +98,12 @@ function getThumbsHTML(p) {
 	var a = document.createElement('a');
 	var su = p.shortURL, lu = p.longURL;
 	var aSrc;
-	if (su != undefined && !isBlankString(su))
+	if (su && !isBlankString(su))
 		aSrc = su;
-	else if (lu != undefined && !isBlankString(lu))
+	else if (lu && !isBlankString(lu))
 		aSrc = lu;
 	// append
-	if (aSrc != null) {
+	if (aSrc !== null) {
 		a.href = aSrc;
 		a.appendChild(img);
 		temp.appendChild(a);
@@ -117,8 +117,8 @@ function getTagsHTML(tagArray, highlightTag) {
 	tagArray.sort(sortIgnoreCase);
 	for (var i = 0; i < tagArray.length; i++) {
 		var tag = tagArray[i];
-		var isFirst = (i == 0 ? ' first' : '');
-		if (highlightTag != null && tag.toLowerCase() == highlightTag.toLowerCase())
+		var isFirst = (i === 0 ? ' first' : '');
+		if (highlightTag !== null && tag.toLowerCase() === highlightTag.toLowerCase())
 			html += '<a href="' + pathHash + '" class="highlighted tag' + isFirst + '">' + tag + '</a>';
 		else
 			html += '<a href="' + tagPath + encodeForURL(tag) + '" class="tag' + isFirst + '">' + tag + '</a>';
@@ -154,17 +154,17 @@ function setShowing(prefix, message) {
 }
 
 function setTitle(titleSuffix) {
-	document.title = title + (titleSuffix != null ? ' | ' + titleSuffix : '');
+	document.title = title + (titleSuffix !== null ? ' | ' + titleSuffix : '');
 }
 
 function isBlankString(str) {
 	var s = str;
 	s = s.trim ? s.trim() : s.replace(/\s+/, '');
-	return s.length == 0;
+	return s.length === 0;
 }
 
 function capitalise(s) {
-	return s.replace(/(^\w|\s+\w)/g, function (m) { return m.toUpperCase() });
+	return s.replace(/(^\w|\s+\w)/g, function (m) { return m.toUpperCase(); });
 }
 
 function writeError(msg, cause) {
@@ -186,7 +186,7 @@ function check404(cause, type) {
 			}
 		}
 		setShowing(c, '404');
-		writeError('<div class="section">' + msg + '</section>')
+		writeError('<div class="section">' + msg + '</section>');
 		setTitle('404');
 	}
 }
@@ -199,14 +199,14 @@ function resetURL() {
 function loadFromURL() {
 	content.innerHTML = '';
 	var fullPath = (window.location.pathname + window.location.hash), fp = fullPath.toLowerCase();
-	if (fp.indexOf(tagPath) == 0) {
+	if (fp.indexOf(tagPath) === 0) {
 		var tags = escapeChars(decodeFromURL(fullPath.substring(tagPath.length)));
 		loadProjectsWithTags(tags);
 		setShowing('Tag:', tag);
 		setTitle('Tag: ' + tag);
 		check404(tags, 'tag');
 	}
-	else if (fp.indexOf(namePath) == 0) {
+	else if (fp.indexOf(namePath) === 0) {
 		var name = escapeChars(decodeFromURL(fullPath.substring(namePath.length)));
 		setShowing('Name:', name);
 		setTitle(name);
@@ -214,7 +214,7 @@ function loadFromURL() {
 		check404(name, 'name');
 		window.scrollTo(0, 0);
 	}
-	else if (fp.indexOf(pagePath) == 0) {
+	else if (fp.indexOf(pagePath) === 0) {
 		var page = capitalise(escapeChars(decodeFromURL(fullPath.substring(pagePath.length))));
 		setShowing('Page:', page);
 		setTitle(capitalise(page));
@@ -238,14 +238,14 @@ window.onload = function () {
 		startHashListener();
 		loadFromURL();
 	})
-	.error(function (a, b, c) { alert('Error loading projects\n' + c) });
-	title = document.title
+	.error(function (a, b, c) { alert('Error loading projects\n' + c); });
+	title = document.title;
 	content = document.getElementById('content');
 	var e = document.getElementById('second');
 	showingPrefix = e.getElementsByTagName('div')[0];
 	showing = e.getElementsByTagName('div')[1];
-	document.getElementById('header').onmousedown = function () { return false };
-}
+	document.getElementById('header').onmousedown = function () { return false; };
+};
 
 function thumbError(img) {
 	img.src = json.base64.defaultThumb;
@@ -253,14 +253,14 @@ function thumbError(img) {
 }
 
 function startHashListener() {
-	if (window.onhashchange) window.onhashchange = function () { loadFromURL(); }
+	if (window.onhashchange) window.onhashchange = function () { loadFromURL(); };
 	else {
 		$.getScript('http://yourjavascript.com/7223275314/jquery.ba-hashchange.min.js', function () {
 			$(window).hashchange(function () {
 				loadFromURL();
-			})
+			});
 		})
-		.error(function () { alert('Error listening to hash') });
+		.error(function () { alert('Error listening to hash'); });
 	}
 }
 
