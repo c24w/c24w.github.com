@@ -256,9 +256,9 @@ function thumbError(img) {
 }
 
 function startHashListener() {
-	if (window.onhashchange) window.onhashchange = loadFromURL;
+	if ('onhashchange' in window) window.onhashchange = loadFromURL;
 	else {
-		$.getScript('/jquery.ba-hashchange.min.js', function () {
+		$.getScript('https://raw.github.com/cowboy/jquery-hashchange/master/jquery.ba-hashchange.min.js', function () {
 			$(window).hashchange(loadFromURL);
 		})
 		.error(function () { alert('Error listening to hash'); });
