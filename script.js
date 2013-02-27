@@ -1,3 +1,5 @@
+(function () {
+
 var pathHash = '/#!/';
 var tagPath = pathHash + 'tag/';
 var namePath = pathHash + 'name/';
@@ -199,6 +201,7 @@ function resetURL() {
 function loadFromURL() {
 	content.innerHTML = '';
 	var fullPath = (window.location.pathname + window.location.hash), fp = fullPath.toLowerCase();
+	_gaq.push(['_trackPageview', fullPath]);
 	if (fp.indexOf(tagPath) === 0) {
 		var tags = escapeChars(decodeFromURL(fullPath.substring(tagPath.length)));
 		loadProjectsWithTags(tags);
@@ -253,12 +256,10 @@ function thumbError(img) {
 }
 
 function startHashListener() {
-	if (window.onhashchange) window.onhashchange = function () { loadFromURL(); };
+	if (window.onhashchange) window.onhashchange = loadFromURL;
 	else {
-		$.getScript('http://yourjavascript.com/7223275314/jquery.ba-hashchange.min.js', function () {
-			$(window).hashchange(function () {
-				loadFromURL();
-			});
+		$.getScript('/jquery.ba-hashchange.min.js', function () {
+			$(window).hashchange(loadFromURL);
 		})
 		.error(function () { alert('Error listening to hash'); });
 	}
@@ -269,3 +270,5 @@ function escapeChars(string) {
 		return entity.replace(/&/, '&amp;');
 	}).replace(/</g, "&lt;");
 }
+
+})();
