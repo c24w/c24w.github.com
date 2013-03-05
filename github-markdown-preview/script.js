@@ -18,7 +18,7 @@ $(function executeScript() {
 				type: "POST",
 				beforeSend: beforeSend,
 				url: 'https://api.github.com/markdown/raw',
-				data: encodeURIComponent(markdown),
+				data: markdown,
 				success: success
 			});
 		}
