@@ -2,9 +2,19 @@ $(function executeScript() {
 
 	var markdown = prompt('Data:');
 
-	$.post('https://api.github.com/markdown/raw', markdown, requestSuccess, 'text/html');
+	$.ajax({
+		type: "POST",
+		beforeSend: beforeSend,
+		url: 'https://api.github.com/markdown/raw',
+		data: markdown,
+		success: success
+	});
 
-	function requestSuccess(data) {
+	function beforeSend(request) {
+		request.setRequestHeader('Content-Type', 'text/x-markdown');
+	}
+
+	function success(data) {
 		preview = $('#preview');
 		preview.html(data);
 	}
