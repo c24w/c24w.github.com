@@ -26,7 +26,7 @@ function loadAllProjects() {
 		addProject(projects[i], null, true, false, false, false);
 }
 
-function loadProjectsWithTags(tag) {
+function loadProjectsWithTag(tag) {
 	for (var i = 0; i < projects.length; i++) {
 		var proj = projects[i];
 		if (hasTag(proj, tag))
@@ -203,11 +203,11 @@ function loadFromURL() {
 	var fullPath = (window.location.pathname + window.location.hash), fp = fullPath.toLowerCase();
 	_gaq.push(['_trackPageview', fullPath]);
 	if (fp.indexOf(tagPath) === 0) {
-		var tags = escapeChars(decodeFromURL(fullPath.substring(tagPath.length)));
-		loadProjectsWithTags(tags);
+		var tag = escapeChars(decodeFromURL(fullPath.substring(tagPath.length)));
 		setShowing('Tag:', tag);
 		setTitle('Tag: ' + tag);
-		check404(tags, 'tag');
+		loadProjectsWithTag(tag);
+		check404(tag, 'tag');
 	}
 	else if (fp.indexOf(namePath) === 0) {
 		var name = escapeChars(decodeFromURL(fullPath.substring(namePath.length)));
