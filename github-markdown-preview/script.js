@@ -27,3 +27,5 @@ $(function executeScript() {
 	$('#previewBtn').click(getMarkdown);
 
 });
+
+// $.get('https:api.github.com/repos/c24w/JavaScript-Testing-Framework/readme', function (data) { console.log(atob(data.content.replace(/\n/g,''))) });
