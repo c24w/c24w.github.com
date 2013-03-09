@@ -1,6 +1,7 @@
 (function () {
 
-var pathHash = '/#!/';
+var basePath = '/portfolio/';
+var pathHash = basePath + '#!/';
 var tagPath = pathHash + 'tag/';
 var namePath = pathHash + 'name/';
 var pagePath = pathHash + 'page/';
@@ -198,7 +199,7 @@ function resetURL() {
 		history.replaceState('', document.title, '/');
 }
 
-function loadFromURL() {
+function handleLocationChange() {
 	content.innerHTML = '';
 	var fullPath = (window.location.pathname + window.location.hash), fp = fullPath.toLowerCase();
 	_gaq.push(['_trackPageview', fullPath]);
@@ -230,7 +231,7 @@ function loadFromURL() {
 		setShowing('Showing:', 'Everything');
 		setTitle(null);
 		if ("replaceState" in history) // remove hashPath
-			history.replaceState('', document.title, '/');
+			history.replaceState('', document.title, basePath);
 	}
 }
 
@@ -239,7 +240,7 @@ window.onload = function () {
 		projects = jsonData.projects;
 		json = jsonData;
 		startHashListener();
-		loadFromURL();
+		handleLocationChange();
 	})
 	.error(function (a, b, c) { alert('Error loading projects\n' + c); });
 	title = document.title;
@@ -256,10 +257,10 @@ function thumbError(img) {
 }
 
 function startHashListener() {
-	if ('onhashchange' in window) window.onhashchange = loadFromURL;
+	if ('onhashchange' in window) window.onhashchange = handleLocationChange;
 	else {
 		$.getScript('https://raw.github.com/cowboy/jquery-hashchange/master/jquery.ba-hashchange.min.js', function () {
-			$(window).hashchange(loadFromURL);
+			$(window).hashchange(handleLocationChange);
 		})
 		.error(function () { alert('Error listening to hash'); });
 	}
