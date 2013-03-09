@@ -235,7 +235,7 @@ function loadFromURL() {
 }
 
 window.onload = function () {
-	$.getJSON('/data.json', function (jsonData) {
+	$.getJSON('./data.json', function (jsonData) {
 		projects = jsonData.projects;
 		json = jsonData;
 		startHashListener();
