@@ -1,25 +1,21 @@
-(function () {
+(function loadScript() {
 
-var basePath = '/portfolio/';
-var pathHash = basePath + '#!/';
-var tagPath = pathHash + 'tag/';
-var namePath = pathHash + 'name/';
-var pagePath = pathHash + 'page/';
-var json; // JSON
-var projects; // JSON
-var content;
-var showing;
-var showingPrefix;
-var title;
+var basePath = '/portfolio/',
+	pathHash = basePath + '#!/',
+	tagPath = pathHash + 'tag/',
+	namePath = pathHash + 'name,',
+	pagePath = pathHash + 'page/',
+	json, projects,	content, showing, showingPrefix, title;
 
 function loadPage(page) {
 	var p = json.pages[page.toLowerCase()];
-	if (p !== null)
+	if (p !== null) {
 		content.innerHTML = '<table class="section gradient" cellpadding="0" cellspacing="0">' +
 							'<tr><td class="info">' +
 							'<h2>' + p.title + '</h2>' +
 							'<p>' + p.content + '</p>' +
 							'</td></tr></table>';
+	}
 }
 
 function loadAllProjects() {
@@ -38,7 +34,7 @@ function loadProjectsWithTag(tag) {
 function loadProjectWithName(name) {
 	for (var i = 0; i < projects.length; i++) {
 		var proj = projects[i];
-		if (proj.name.toLowerCase() == name.toLowerCase()) {
+		if (proj.name.toLowerCase() === name.toLowerCase()) {
 			addProject(projects[i], null, false, true, true, true);
 			break;
 		}
