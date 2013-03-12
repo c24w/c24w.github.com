@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Cantora+One);
+
+body {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 12pt;
+	margin: 3em 3em 3em 3em;
+}
+
+h1 {
+	font-family: 'Cantora One', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
+	font-size: 35pt;
+	text-align: center;
+	margin: 0;
+}
+
+h2 {
+	font-family: 'Cantora One', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	margin: 1em 0;
+}
+
+h3 {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	margin: 1em 0;
+}
+
+a:link {
+	text-decoration: none;
+	color: #05a;
+}
+
+a:visited {
+	color: #50a;
+}
+
+a:hover {
+	color: #3a5;
+}
+
+a:active {
+	color: #c00;
+}
