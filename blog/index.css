@@ -37,3 +37,11 @@ a:hover {
 a:active {
 	color: #c00;
 }
+
+.month {
+	font-style: italic;
+}
+
+ul li a {
+	font-size: 150%;
+}
