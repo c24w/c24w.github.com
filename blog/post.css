@@ -94,7 +94,16 @@ blockquote .source {
 	margin: 0;
 }
 
+.pic-para img {
+	margin-top: 0.5em;
+}
+
 .pic-para.right img {
 	float:right;
 	margin-left: 1em;
+}
+
+.pic-para.left img {
+	float:left;
+	margin-right: 1em;
 }
