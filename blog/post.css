@@ -37,3 +37,7 @@ a:hover {
 a:active {
 	color: #c00;
 }
+
+.date {
+	font-size: 75%;
+}
