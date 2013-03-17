@@ -4,7 +4,7 @@ body {
 }
 
 .content {
-	box-shadow: 0 0.5em 1em #bfbfbf, inset 0 -0.5em 1em #dCe2e8;
+	box-shadow: 0 0 1em #bfbfbf, inset 0 -0.5em 1em #dCe2e8;
 	max-width: 750px;
 	min-width: 200px;
 	margin: 1em auto 1em;
@@ -15,9 +15,9 @@ body {
 }
 
 h1 {
-	font-size: 300%;
 	font-family: 'Cantora One', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
 	text-align: center;
+	font-size: 300%;
 	margin: 0;
 }
 
@@ -31,12 +31,18 @@ h1 a {
 
 h2 {
 	font-family: 'Cantora One', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 200%;
 	margin: 1em 0;
 }
 
 h3 {
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 150%;
 	margin: 1em 0;
+}
+
+h4 {
+	font-size: 100%;
 }
 
 a:link {
