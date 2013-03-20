@@ -42,20 +42,30 @@ using NUnit.Framework;
 namespace FizzBuzzWizz
 {
 	[TestFixture]
-	internal class FizzBuzzWizz
+	class FizzBuzzWizz
 	{
+
+		[TestCase(3, "Fizz")]
+		[TestCase(5, "Buzz")]
+		[TestCase(10, "BuzzWizz")]
+		[TestCase(6, "Fizz")]
+		[TestCase(15, "FizzBuzz")]
+		[TestCase(30, "FizzBuzzWizz")]
+		[TestCase(50, "BuzzWizz")]
+		public void Given_number_should_return_expected_string(int number, string expected)
+		{
+			Assert.That(GetFizzBuzzWizz(number), Is.EqualTo(expected));
+		}
+
 		private static string GetFizzBuzzWizz(int i)
 		{
-			return GetFizz(i)
-				   + GetBuzz(i)
-				   + GetWizz(i);
+			return GetFizz(i) + GetBuzz(i) + GetWizz(i);
 		}
 
 		private static string GetWizz(int i)
 		{
 			return IfDivisibleReturnString(i, 10, "Wizz");
 		}
-
 
 		private static string GetBuzz(int i)
 		{
@@ -69,61 +79,15 @@ namespace FizzBuzzWizz
 
 		private static string IfDivisibleReturnString(int dividend, int divisor, string s)
 		{
-			return dividend%divisor == 0 ? s : "";
+			return dividend % divisor == 0 ? s : string.Empty;
 		}
 
-		[Test]
-		public void Fifteen_should_output_FizzBuzz()
-		{
-			string output = GetFizzBuzzWizz(15);
-			Assert.That(output, Is.EqualTo("FizzBuzz"));
-		}
-
-		[Test]
-		public void Fifty_should_output_BuzzWizz()
-		{
-			string output = GetFizzBuzzWizz(50);
-			Assert.That(output, Is.EqualTo("BuzzWizz"));
-		}
-
-		[Test]
-		public void Five_should_output_Buzz()
-		{
-			string output = GetFizzBuzzWizz(5);
-			Assert.That(output, Is.EqualTo("Buzz"));
-		}
-
-		[Test]
-		public void Six_should_output_Fizz()
-		{
-			string output = GetFizzBuzzWizz(6);
-			Assert.That(output, Is.EqualTo("Fizz"));
-		}
-
-		[Test]
-		public void Ten_should_output_Buzzwhiz()
-		{
-			string output = GetFizzBuzzWizz(10);
-			Assert.That(output, Is.EqualTo("Buzzwhiz"));
-		}
-
-		[Test]
-		public void Thirty_should_output_FizzBuzzwhiz()
-		{
-			string output = GetFizzBuzzWizz(30);
-			Assert.That(output, Is.EqualTo("FizzBuzzwhiz"));
-		}
-
-		[Test]
-		public void Three_should_output_Fizz()
-		{
-			string output = GetFizzBuzzWizz(3);
-			Assert.That(output, Is.EqualTo("Fizz"));
-		}
 	}
 }
 </pre>
 <script type="text/javascript">SyntaxHighlighter.all()</script>
+
+<p>Confession: I tidied and very slightly refactored the code from the original; however, the tests and implementation remain the same.</p>
 
 </div></body>
 </html>
