@@ -14,113 +14,111 @@
 </head>
 <body><div class="content">
 
-<h1><a href=".">Fizz Buzz Whizz</a></h1>
+<h1><a href=".">Fizz Buzz Wizz</a></h1>
 <p class="date">23/09/2012 21:44</p>
 
 <p>Kata completed in C# through TDD with NUnit.</p>
 
 <h3>Specification</h3>
 
-<p>For any given number, <em>n</em>, output <em>Fizz</em>, <em>Buzz</em> or <em>Whiz</em> (stacking) such that:</p>
+<p>For any given number, <em>n</em>, output <em>Fizz</em>, <em>Buzz</em> or <em>Wizz</em> (stacking) such that:</p>
 
 <table>
 	<tr style="text-align: center;"><td style="text-align: right;">if <em>n</em> is a multiple of:</td><td>3</td><td>5</td><td>10</td></tr>
-	<tr style="text-align: center;"><td style="text-align: right;">then output:</th><td><em>Fizz</em></td><td><em>Buzz</em></td><td><em>Whiz</em></td></tr>
+	<tr style="text-align: center;"><td style="text-align: right;">then output:</th><td><em>Fizz</em></td><td><em>Buzz</em></td><td><em>Wizz</em></td></tr>
 </table>
 
 <p>Examples:</p>
 <ul>
 	<li>3 &rarr; <em>Fizz</em></li>
-	<li>10 &rarr; <em>BuzzWhiz</em></li>
+	<li>10 &rarr; <em>BuzzWizz</em></li>
 	<li>15 &rarr; <em>FizzBuzz</em></li>
-	<li>50 &rarr; <em>FizzBuzzWhiz</em></li>
+	<li>50 &rarr; <em>FizzBuzzWizz</em></li>
 </ul>
 
 <pre class="brush: csharp code">
 using NUnit.Framework;
 
-namespace FizzBuzzWhiz
+namespace FizzBuzzWizz
 {
 	[TestFixture]
-	internal class FizzBuzzWhiz
+	internal class FizzBuzzWizz
 	{
-		private static string GetFizzBuzzWhiz(int i)
+		private static string GetFizzBuzzWizz(int i)
 		{
 			return GetFizz(i)
 				   + GetBuzz(i)
-				   + GetWhiz(i);
+				   + GetWizz(i);
 		}
 
-		private static string GetWhiz(int i)
+		private static string GetWizz(int i)
 		{
-			return IfDivisibleReturnString(i, 10, "whiz");
+			return IfDivisibleReturnString(i, 10, "Wizz");
 		}
 
 
 		private static string GetBuzz(int i)
 		{
-			return IfDivisibleReturnString(i, 5, "buzz");
+			return IfDivisibleReturnString(i, 5, "Buzz");
 		}
 
 		private static string GetFizz(int i)
 		{
-			return IfDivisibleReturnString(i, 3, "fizz");
+			return IfDivisibleReturnString(i, 3, "Fizz");
 		}
 
 		private static string IfDivisibleReturnString(int dividend, int divisor, string s)
 		{
-			if (dividend%divisor == 0)
-				return s;
-			return "";
+			return dividend%divisor == 0 ? s : "";
 		}
 
 		[Test]
-		public void Fifteen_should_output_fizzbuzz()
+		public void Fifteen_should_output_FizzBuzz()
 		{
-			string output = GetFizzBuzzWhiz(15);
-			Assert.That(output, Is.EqualTo("fizzbuzz"));
+			string output = GetFizzBuzzWizz(15);
+			Assert.That(output, Is.EqualTo("FizzBuzz"));
 		}
 
 		[Test]
-		public void Fifty_should_output_buzzwhiz()
+		public void Fifty_should_output_BuzzWizz()
 		{
-			string output = GetFizzBuzzWhiz(50);
-			Assert.That(output, Is.EqualTo("buzzwhiz"));
+			string output = GetFizzBuzzWizz(50);
+			Assert.That(output, Is.EqualTo("BuzzWizz"));
 		}
 
 		[Test]
-		public void Five_should_output_buzz()
+		public void Five_should_output_Buzz()
 		{
-			string output = GetFizzBuzzWhiz(5);
-			Assert.That(output, Is.EqualTo("buzz"));
+			string output = GetFizzBuzzWizz(5);
+			Assert.That(output, Is.EqualTo("Buzz"));
 		}
 
 		[Test]
-		public void Six_should_output_fizz()
+		public void Six_should_output_Fizz()
 		{
-			string output = GetFizzBuzzWhiz(6);
-			Assert.That(output, Is.EqualTo("fizz"));
+			string output = GetFizzBuzzWizz(6);
+			Assert.That(output, Is.EqualTo("Fizz"));
 		}
 
 		[Test]
-		public void Ten_should_output_buzzwhiz()
+		public void Ten_should_output_Buzzwhiz()
 		{
-			string output = GetFizzBuzzWhiz(10);
-			Assert.That(output, Is.EqualTo("buzzwhiz"));
+			string output = GetFizzBuzzWizz(10);
+			Assert.That(output, Is.EqualTo("Buzzwhiz"));
 		}
 
 		[Test]
-		public void Thirty_should_output_fizzbuzzwhiz()
+		public void Thirty_should_output_FizzBuzzwhiz()
 		{
-			string output = GetFizzBuzzWhiz(30);
-			Assert.That(output, Is.EqualTo("fizzbuzzwhiz"));
+			string output = GetFizzBuzzWizz(30);
+			Assert.That(output, Is.EqualTo("FizzBuzzwhiz"));
 		}
 
 		[Test]
-		public void Three_should_output_fizz()
+		public void Three_should_output_Fizz()
 		{
-			string output = GetFizzBuzzWhiz(3);
-			Assert.That(output, Is.EqualTo("fizz"));
+			string output = GetFizzBuzzWizz(3);
+			Assert.That(output, Is.EqualTo("Fizz"));
 		}
 	}
 }
