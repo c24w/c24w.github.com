@@ -1,0 +1,5 @@
+Add anchor links to headers, e.g:
+<h1 id="introduction">
+	<a href="#introduction" class="subhead-link">#</a>
+	Introduction
+</h1>
