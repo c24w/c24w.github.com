@@ -3,3 +3,12 @@ Add anchor links to headers, e.g:
 	<a href="#introduction" class="subhead-link">#</a>
 	Introduction
 </h1>
+
+
+App (node?) to read in more simplistic template of post and generate additional stuff, like anchors, above.
+
+--
+
+Post
+
+Academy still unpolished idea and ALLOWED to overrun to accommodate more learning - not just "you're done, be free to sink or swim"
