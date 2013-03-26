@@ -12,3 +12,9 @@ App (node?) to read in more simplistic template of post and generate additional 
 Post
 
 Academy still unpolished idea and ALLOWED to overrun to accommodate more learning - not just "you're done, be free to sink or swim"
+
+
+blog
+
+	 - autogenerate new blog page, in correct directory structure
+	 - add a link to the page on blog pages?
