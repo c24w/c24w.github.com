@@ -22,6 +22,8 @@ h3 {
 }
 
 a:link {
+	font-family: 'Cantora One', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	/*font-weight: bold;*/
 	text-decoration: none;
 	color: #05a;
 }
@@ -36,6 +38,10 @@ a:hover {
 
 a:active {
 	color: #c00;
+}
+
+.year, .month {
+	cursor: default;
 }
 
 .month {
