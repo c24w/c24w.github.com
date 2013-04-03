@@ -18,3 +18,9 @@ blog
 
 	 - autogenerate new blog page, in correct directory structure
 	 - add a link to the page on blog pages?
+
+
+ projects gh-pages
+ 	 - template (e.g. /project/style.css)
+
+ make online CV
