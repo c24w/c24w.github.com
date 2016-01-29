@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/c24w
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://c24w.github.com
+  * I am c24w (https://keybase.io/c24w) on keybase.
+  * I have a public key with fingerprint E158 FF0A 0E9D 0F0E 8300  67DC CAF7 B35F C6FB A11F
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101ed0c094f88870f91d078dce79e12ad629ed1d610ba49ff2e8f10ff0d9d9b1f420a",
+            "fingerprint": "e158ff0a0e9d0f0e830067dccaf7b35fc6fba11f",
+            "host": "keybase.io",
+            "key_id": "caf7b35fc6fba11f",
+            "kid": "0101ed0c094f88870f91d078dce79e12ad629ed1d610ba49ff2e8f10ff0d9d9b1f420a",
+            "uid": "cbd71eb46ca2899a8705da4d51c85700",
+            "username": "c24w"
+        },
+        "service": {
+            "hostname": "c24w.github.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1454076336,
+    "expire_in": 157680000,
+    "prev": "d76ba1de259562efd4be000641b874b8d96d8d2a8f00a15814bb71890b6abb9e",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.49
+Comment: https://keybase.io/crypto
+
+yMIlAnicrVJbSFRBGF5N3bSsJbR6MKITRaHpzNlzmVkfksDUiKLrQ0brzJkZPah7
+tt3j1ioWSTfsRkFRT4lhkUV3I0qym1FYEkFB0ZWooCKqhygTbI4V9NBj8zLM/3/f
+93//P/+N7BG+rJTG59NfD2Y+aknpu7qvwbf82OpTTQp1WFIJNSm1fPjidYzH3XCt
+zZSQAiCAnAELYE0ghEwgMGTARMziJuZQJcxQMWeQGRBQomEhVI4EBEIAhhmmUGgq
+IEqBIuxINY9FY3bElbIc6khCCOCYAQE4CgJgmMyyiDBpUBeWISiBUEhijRP3GNIc
+JXFeaDsyJh/hYXv/wP9n3w2/6lBmQk41wyIqwphIQZ0RjenQQroJgAeM81iE1HMP
+rWprlOYCRUYStsW9oXpd/JUtrLbdmgZaaDn1khqNOa5jOXUyWeO60XjII7vJqIde
+w2n4t06Y2hEmxygZCR6L205ECUGJtFzbE4aargHTCAaNAoWvjdoxHrY9hG4aCMjj
+1eEJKclMQw6LcVXHuqFywTTKZd7QIEWmRhHDBkNMJUgAQORHQY1SEyIMqEEoxVzx
+OlsdcZQQljZJtZSM29UR4jbEuNJ87crKNF9Kli8jPdVbL19WZuDP0uUe9A+VhRMX
+nlxsm/FhdsXbdYumrKwrPT1x8s4lOV09wVUnXgYv939aljPYuWfXUN670UZ/7P7h
+ykDyoYAfGnfV362rSnkTzzl0b9bHDvIl9dG89kPhxLne/f7vyrj8p+s/LtqxLffI
+nbcbS3rTN5WPnTRtXPPnCeNnvlw4FOipTX1XVJ6xu7OpuO+FNVm9XrK07dPyORuS
+1ysGOkaGTs8/O7674Iw/v3STngTtJ5IL6JYnoqj7dsljuPjS53z0amr2dsz9Ay2Z
+z1pO7v12/kHfxjY498epLiMr40Ag7fbXL0Wtqdkvbubi42Zl2a3y/rzAIKoYOaa7
+e9S+3tb3m31bVxQX3+m4eFSt+gnwYz8q
+=CnRz
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/c24w
+
+==================================================================
